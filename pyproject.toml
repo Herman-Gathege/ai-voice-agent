@@ -5,6 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "elevenlabs>=2.9.2",
+    "ffmpeg>=1.4",
+    "pydub>=0.25.1",
     "python-dotenv>=1.1.1",
+    "requests>=2.32.4",
     "websockets>=15.0.1",
 ]

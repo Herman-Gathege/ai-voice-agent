@@ -78,10 +78,28 @@
         },
         "speak": {
             "provider": {
-                "type": "deepgram",
-                "model": "aura-2-thalia-en"
-            }
+              "type": "eleven_labs",               
+              "model_id": "eleven_turbo_v2_5",
+              "voice_id": "pNInz6obpgDQGcFmaJgB",
+              "language_code": "en"
+            },
+            "endpoint": {
+                "url": "https://api.elevenlabs.io/v1/text-to-speech/pNInz6obpgDQGcFmaJgB/stream?optimize_streaming_latency=2",  
+                "headers": {
+                    "xi-api-key": "PLACEHOLDER_FOR_KEY",  
+                    "Content-Type": "application/json",
+                    "Accept": "audio/mpeg"
+                }
+            },
+            "body": {
+                    "model_id": "eleven_turbo_v2_5",
+                    "voice_settings": {
+                        "stability": 0.4,
+                        "similarity_boost": 0.8
+                    }
+                }
         },
+        
         "greeting": "Hello! I'm your pharmacy assistant. I can help you with drug information, placing orders, and checking order status. When placing orders, I'll need your full name spelled out clearly and will confirm all details with you. How can I assist you today?"
     }
 }
